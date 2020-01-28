@@ -5,11 +5,14 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter } from 'react-router-dom';
 
+import client from './client';
 import App from './components/App';
 
 const Root = () => (
   <BrowserRouter>
-    <App />
+    <ApolloProvider client={client}>
+      <App />
+    </ApolloProvider>
   </BrowserRouter>
 );
 

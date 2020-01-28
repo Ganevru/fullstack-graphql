@@ -43,6 +43,7 @@
   },
   "devDependencies": {
     "@playlyfe/gql": "^2.6.2",
+    "@types/webpack-env": "^1.15.0",
     "@typescript-eslint/eslint-plugin": "2.x",
     "@typescript-eslint/parser": "2.x",
     "babel-core": "^6.26.3",
