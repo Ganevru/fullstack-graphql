@@ -2,6 +2,23 @@
   "name": "client",
   "version": "0.1.0",
   "private": true,
+  "scripts": {
+    "app": "parcel client/index.html --out-dir client/dist",
+    "server": "node api/src/server.js",
+    "test-server": "jest api/tests"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
   "dependencies": {
     "@apollo/react-hooks": "^3.1.2",
     "apollo-cache-inmemory": "^1.6.3",
@@ -24,30 +41,26 @@
     "react-select": "^3.0.8",
     "react-spinners": "^0.6.1"
   },
-  "scripts": {
-    "server": "node api/src/server.js",
-    "app": "parcel client/index.html --out-dir client/dist",
-    "test-server": "jest api/tests"
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  },
   "devDependencies": {
     "@playlyfe/gql": "^2.6.2",
+    "@typescript-eslint/eslint-plugin": "2.x",
+    "@typescript-eslint/parser": "2.x",
     "babel-core": "^6.26.3",
+    "babel-eslint": "10.x",
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "babel-preset-env": "^1.7.0",
     "babel-preset-react": "^6.24.1",
+    "eslint": "6.x",
+    "eslint-config-react-app": "^5.1.0",
+    "eslint-plugin-flowtype": "3.x",
+    "eslint-plugin-import": "2.x",
+    "eslint-plugin-jsx-a11y": "6.x",
+    "eslint-plugin-prettier": "^3.1.2",
+    "eslint-plugin-react": "7.x",
+    "eslint-plugin-react-hooks": "1.x",
+    "eslint-plugin-simple-import-sort": "^5.0.1",
     "jest": "^24.9.0",
-    "parcel": "^1.12.3"
+    "parcel": "^1.12.3",
+    "prettier": "^1.19.1"
   }
 }

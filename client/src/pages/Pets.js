@@ -1,21 +1,20 @@
-import React, {useState} from 'react'
-import gql from 'graphql-tag'
-import { useQuery, useMutation } from '@apollo/react-hooks'
-import PetsList from '../components/PetsList'
-import NewPetModal from '../components/NewPetModal'
-import Loader from '../components/Loader'
+import { useMutation, useQuery } from '@apollo/react-hooks';
+import gql from 'graphql-tag';
+import React, { useState } from 'react';
 
+import Loader from '../components/Loader';
+import NewPetModal from '../components/NewPetModal';
+import PetsList from '../components/PetsList';
 
-export default function Pets () {
-  const [modal, setModal] = useState(false)
+export default function Pets() {
+  const [modal, setModal] = useState(false);
 
+  const onSubmit = (input) => {
+    setModal(false);
+  };
 
-  const onSubmit = input => {
-    setModal(false)
-  }
-  
   if (modal) {
-    return <NewPetModal onSubmit={onSubmit} onCancel={() => setModal(false)} />
+    return <NewPetModal onSubmit={onSubmit} onCancel={() => setModal(false)} />;
   }
 
   return (
@@ -35,5 +34,5 @@ export default function Pets () {
         <PetsList />
       </section>
     </div>
-  )
+  );
 }
